@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type ="text/xsl" href ="template.xsl" ?>
+<stores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema/StoreML.xsd">
+	<store id="S1234" name="Marjane" registration="2002-12-01">
+		<employees>
+			<employee id="E222" grade="MANAGER">
+	            <firstName>Mohammed</firstName>
+	            <lastName>KHEZAMI</lastName>
+	            <dateOfBirth>2000-05-01</dateOfBirth>
+				<salary>6500.00</salary>
+				<photo id="PE2005" source="img/employees/PE2005.jpg"/>
+			</employee>
+		<employee id="E1755170765988257" grade="SELLER"><firstName>Ismail</firstName><lastName>OUCHTA</lastName><dateOfBirth>2023-01-25</dateOfBirth><salary>2500</salary><photo id="PE1755170765988267" source="img/employees/PE1755170765988267.jpg"/></employee></employees>
+      	<products>
+        	<product barCode="P11201">
+                <name>Apple AirPods</name>
+                <description>Plus de 24 heures d'autonomie, configuration sans effort. Casque Bluetooth pour iPhone</description>
+                <price>500.00</price>
+				<stock>12</stock>
+                <photos>
+                       <photo id="A2222" source="img/products/P11201/A2222.jpg"/>
+            	</photos>
+            </product>
+			<product barCode="P11202">
+                <name>Apple MAC</name>
+                <description>Plus de 24 heures d'autonomie, configuration sans effort. Casque Bluetooth pour iPhone</description>
+                <price>500.00</price>
+				<stock>12</stock>
+                <photos>
+                       <photo id="A2229" source="img/products/P11202/A2229.jpg"/>
+            	</photos>
+            </product>
+		</products>
+    </store>
+	<store id="S3213" name="Carrefour" registration="2004-12-01">
+		<employees>
+			<employee id="E222" grade="MANAGER">
+	            <firstName>Mohammed</firstName>
+	            <lastName>EL FADIL</lastName>
+	            <dateOfBirth>2000-04-11</dateOfBirth>
+				<salary>5500.00</salary>
+				<photo id="PE2313" source="img/employees/PE2312.jpg"/>
+			</employee>
+			
+		<employee id="E1755173594347829" grade="SELLER"><firstName>Badr</firstName><lastName>OURABBI</lastName><dateOfBirth>2023-01-25</dateOfBirth><salary>2000</salary><photo id="PE1755173594347835" source="img/employees/PE1755173594347835.jpg"/></employee></employees>
+      	<products>
+        	<product barCode="P11200">
+                <name>Apple AirPods</name>
+                <description>Plus de 24 heures d'autonomie, configuration sans effort. Casque Bluetooth pour iPhone</description>
+                <price>600.00</price>
+				<stock>120</stock>
+                <photos>
+                       <photo id="PP2222" source="img/products/P11200/PP2222.jpg"/>
+					   <photo id="PP2223" source="img/products/P11200/PP2223.jpg"/>
+					   <photo id="PP2224" source="img/products/P11200/PP2224.jpg"/>
+            	</photos>
+            </product>
+        </products>
+    </store>
+	<store id="S1755177561718252" name="BIM" registration="2023-01-16"><employees><employee id="E1755177647670737" grade="SELLER"><firstName>Amine</firstName><lastName>SABRI</lastName><dateOfBirth>1998-06-07</dateOfBirth><salary>3000</salary><photo id="PE1755177647670743" source="img/employees/PE1755177647670743.jpg"/></employee></employees><products><product barCode="P1755177584075413"><name>Souris gamer</name><description>souris DPI 240</description><price>120</price><stock>8</stock><photos><photo id="PE1755177584079554" source="img/products/P1755177584075413/PP1755177584079554.jpg"/><photo id="PE1755177584080029" source="img/products/P1755177584075413/PP1755177584080029.jpg"/><photo id="PE1755177584080268" source="img/products/P1755177584075413/PP1755177584080268.jpg"/></photos></product><product barCode="P1755177618939710"><name>Tendeuse</name><description>Tondeuse &#xE9;lectrique Cheveux Clipper Professional Hair cutting</description><price>200</price><stock>4</stock><photos><photo id="PE1755177618939972" source="img/products/P1755177618939710/PP1755177618939972.jpg"/><photo id="PE1755177618940228" source="img/products/P1755177618939710/PP1755177618940228.jpg"/><photo id="PE1755177618940477" source="img/products/P1755177618939710/PP1755177618940477.jpg"/></photos></product></products></store></stores>

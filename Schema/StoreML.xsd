@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+<!-- Start Global Elements-->
+	<xsd:element name="photo" type="photoType"/>
+	<xsd:element name="stores" type="storesType"/>
+
+<!-- End Global Elements-->
+
+	
+<!-- Start defining types-->
+
+
+	<!--Photo Type -->
+	<xsd:complexType name="photoType">
+		<xsd:attribute name="id" type="xsd:ID"/>
+		<xsd:attribute name="source" type="xsd:string"/>
+	</xsd:complexType>
+
+	<!-- Photos Type-->
+	<xsd:complexType name="photosType">
+	   <xsd:sequence>
+	     <xsd:element ref="photo" minOccurs="0" maxOccurs="10" />
+	   </xsd:sequence>
+	</xsd:complexType>
+
+	<!--Price Type -->
+	<xsd:simpleType name="moneyType">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minExclusive value="0"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- BarCode Type -->
+	<xsd:simpleType name="barCodeType">
+		<xsd:restriction base="xsd:ID">
+			<xsd:pattern value="E[0-9]{5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+
+	<!-- Product Type-->
+	<xsd:complexType name="productType">
+	   <xsd:sequence>
+	   		<xsd:element name="libelle" type="xsd:string" />
+	   		<xsd:element name="description" type="xsd:string" minOccurs="0" />
+			<xsd:element name="price" type="moneyType" />
+			<xsd:element name="stock" type="xsd:integer" />
+			<xsd:element name="photos" type="photosType" />
+	   </xsd:sequence>
+	   		<xsd:attribute name="barCode" type="barCodeType"/>
+	</xsd:complexType>
+	
+	<!-- Products Type-->
+	<xsd:complexType name="productsType">
+	   <xsd:sequence>
+	   		<xsd:element name="product" type="productType" minOccurs="0" maxOccurs="unbounded" />
+	   </xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Grade Type-->
+	<xsd:simpleType name="gradeType">
+  		<xsd:restriction base="xsd:string">
+		    <xsd:enumeration value="MANAGER"/>
+		    <xsd:enumeration value="SELLER"/>
+		    <xsd:enumeration value="MAINTAINER"/>
+  		</xsd:restriction>
+	</xsd:simpleType>
+
+	<!-- Employee Type -->
+	<xsd:complexType name="employeeType">
+	   <xsd:sequence>
+	   		<xsd:element name="firstName" type="xsd:string"/>
+	   		<xsd:element name="lastName" type="xsd:string"/>
+			<xsd:element name="dateOfBirth" type="xsd:date" />
+			<xsd:element name="salary" type="moneyType" />
+			<xsd:element ref="photo" />
+	   </xsd:sequence>
+	   		<xsd:attribute name="id" type="xsd:ID"/>
+			<xsd:attribute name="grade" type="gradeType" />
+	</xsd:complexType>
+	
+	<!-- Employees Type -->
+	<xsd:complexType name="employeesType">
+	   <xsd:sequence>
+			<xsd:element name="employee" type="employeeType" minOccurs="1" maxOccurs="unbounded" />
+	   </xsd:sequence>
+	</xsd:complexType>
+
+	<!-- Store type -->
+	<xsd:complexType name="storeType">
+	   <xsd:sequence>
+	   		<xsd:element name="employees" type="employeesType"/>
+	   		<xsd:element name="products" type="productsType" />
+	   </xsd:sequence>
+	   		<xsd:attribute name="id" type="xsd:ID"/>
+			<xsd:attribute name="registration" type="xsd:date" />
+	</xsd:complexType>
+
+	<!-- Stores Type -->
+	<xsd:complexType name="storesType">
+	   <xsd:sequence>
+			<xsd:element name="store" type="storeType" minOccurs="0" maxOccurs="unbounded" />
+	   </xsd:sequence>
+	</xsd:complexType>
+
+
+</xsd:schema>
