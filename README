@@ -1,4 +1,4 @@
-Le Mini-Projet est une application web basé sur XSLT pour récupérer et afficher les données du fichier XML en HTML
+Le Projet est une application web basé sur XSLT pour récupérer et afficher les données du fichier XML en HTML
 avec la possibilité de :
 	--> Crée des nouvelles boutiques pour les gérers dans la page home.
 	--> Ajouter ou supprimer des produits ou des employées.
